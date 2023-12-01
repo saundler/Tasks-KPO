@@ -19,5 +19,11 @@ public class Programm {
         } else {
             System.out.println("Неверно!!!");
         }
+        Veterinarian<? super Pet> vet = new Veterinarian<>();
+        if (vet.getPetHealth(pet)){
+            System.out.print("Питомец здоров!!!");
+        } else {
+            System.out.print("Питомец болен!!!");
+        }
     }
 }
