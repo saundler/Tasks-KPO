@@ -73,7 +73,7 @@ public class Cinema {
         boolean flag;
         outputMovies();
         do {
-            System.out.print("\u001B[34m" + "Введите название фильма:" + "\u001B[0m");
+            System.out.print("\u001B[34m" + "Введите название фильма: " + "\u001B[0m");
             String movieName = scanner.next();
             movie = movies.stream().filter(currMovie -> currMovie.name.equals(movieName)).findFirst().orElse(null);
             if (movie == null) {

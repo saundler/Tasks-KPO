@@ -3,10 +3,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         User user = new User();
-        Cinema cinema;
+        Cinema cinema = null;
         try {
             cinema = JsonUtil.loadCinemaFromFile("data/cinema.txt");
         } catch (Exception exception) {
+            cinema = null;
+        }
+        if (cinema == null) {
             boolean flag;
             int placesNumbers = 1;
             Scanner scanner = new Scanner(System.in);

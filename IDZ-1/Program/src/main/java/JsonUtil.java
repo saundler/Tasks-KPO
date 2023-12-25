@@ -4,10 +4,11 @@ import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.time.LocalTime;
 
 
 public class JsonUtil {
-    private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
+    private static final Gson GSON = new GsonBuilder().registerTypeAdapter(LocalTime.class, new LocalTimeAdapter()).setPrettyPrinting().create();
 
     public static String serializeObject(Object object) {
         return GSON.toJson(object);
@@ -26,23 +27,6 @@ public class JsonUtil {
     public static Cinema loadCinemaFromFile(String filePath) {
         try (Reader reader = new FileReader(filePath)) {
             return GSON.fromJson(reader, Cinema.class);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-    public static void saveUserToFile(User user, String filePath) {
-        try (FileWriter writer = new FileWriter(filePath)) {
-            writer.write(serializeObject(user));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    // Метод для десериализации объекта User из файла JSON
-    public static User loadUserFromFile(String filePath) {
-        try (Reader reader = new FileReader(filePath)) {
-            return GSON.fromJson(reader, User.class);
         } catch (IOException e) {
             e.printStackTrace();
             return null;

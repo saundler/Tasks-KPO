@@ -1,0 +1,6 @@
+{
+  "movies": [],
+  "sessions": [],
+  "placesNumbers": 5,
+  "tickets": []
+}
