@@ -1,6 +1,35 @@
 {
-  "movies": [],
-  "sessions": [],
-  "placesNumbers": 5,
-  "tickets": []
+  "movies": [
+    {
+      "name": "a",
+      "minutesDuration": 5
+    }
+  ],
+  "sessions": [
+    {
+      "movie": {
+        "name": "a",
+        "minutesDuration": 5
+      },
+      "start": "23:34:00",
+      "end": "23:39:00",
+      "places": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false
+      ]
+    }
+  ],
+  "placesNumbers": 7,
+  "tickets": [
+    {
+      "movieName": "a",
+      "sessionStart": "23:34:00",
+      "placeNumber": 4
+    }
+  ]
 }

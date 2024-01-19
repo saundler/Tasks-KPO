@@ -25,10 +25,10 @@ public class JsonUtil {
 
     // Метод для десериализации объекта Cinema из файла JSON
     public static Cinema loadCinemaFromFile(String filePath) {
-        try (Reader reader = new FileReader(filePath)) {
+        try  {
+            Reader reader = new FileReader(filePath);
             return GSON.fromJson(reader, Cinema.class);
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
             return null;
         }
     }

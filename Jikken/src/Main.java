@@ -2,18 +2,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        long a;
-        for (int i = 0; i < 12; ++i) {
-            try {
-                a = Long.parseLong(scanner.nextLine());
-            } catch (java.lang.NumberFormatException e) {
-                System.out.println(e);
-                //scanner.nextLong();
-            }
-            System.out.println(i);
-        }
-
-
+        String s1 = new String("abc");
+        String s2 = new String("abc");
+        System.out.println("s1 == s2 is:" + (s1 == s2));
     }
 }
