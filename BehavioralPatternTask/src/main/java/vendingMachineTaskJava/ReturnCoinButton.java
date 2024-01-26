@@ -12,6 +12,7 @@ public class ReturnCoinButton {
             System.out.println("Returning all coins...");
         else
             System.out.println("Machine has no coins to return...");
+        coins.notify(this);
     }
 
 }

@@ -13,5 +13,6 @@ public class BuyTeaButton {
             System.out.println("Preparing tea...");
         else
             System.out.println("Not enough to buy tea...");
+        coins.notify(this);
     }
 }

@@ -14,5 +14,6 @@ public class BuyCoffeeButton {
             System.out.println("Preparing coffee...");
         else
             System.out.println("Not enough to buy coffee...");
+        coins.notify(this);
     }
 }
